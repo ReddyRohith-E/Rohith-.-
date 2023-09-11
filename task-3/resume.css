@@ -1,0 +1,42 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+
+  }
+  
+  .main {
+    width: 850px;
+    margin: 0 auto;
+  }
+  
+  .heading {
+    background-color:rgb(40, 59, 59);
+    color:beige;
+    padding: 20px;
+  }
+  
+  .content {
+    padding: 20px;
+  }
+  
+  h1, h2, h3 {
+    margin:auto;
+    font-weight: bold;
+  }
+  
+  ul {
+    list-style-type:none;
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  a {
+    color:black;
+    text-decoration:double;
+    font-weight: bold;
+  }

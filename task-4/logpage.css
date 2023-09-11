@@ -1,0 +1,61 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 10px;
+    background-color:#fff;
+  }  
+  .content {
+    max-width:max-content;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  .image {
+    text-align: center;
+  }
+  .input {
+    margin-top: 20px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+  input {
+    width:100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+  }
+  input[type="submit"] {
+    background-color: blue;
+    color:#ccc;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    border:none;
+    cursor: pointer;
+    border-radius: 10px;
+  }
+  .pass{
+    text-align: center;
+    font-weight: bold;
+  }
+.or{
+    text-align: center;
+    color:black;
+    font-weight: bold;
+  }
+.end {
+
+    width:auto;
+    background-color: green;
+    background-position: center;
+    text-align: center;
+   color:#fff;
+   font-weight: bold;
+    padding: 10px;
+    border:none;
+    border-radius: 10px;
+    margin-bottom: 10px;
+    cursor: pointer;
+  }
