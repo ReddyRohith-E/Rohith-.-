@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Webinar Registration Form</title>
+    <link rel="stylesheet" href="task_5.css">
+</head>
+<body>
+  <div class="main">
+  <div class="head-img">
+  <img src="https://aurawebsolutions.com/wp-content/uploads/2019/08/ux-768x571.png" alt="Loading..."> <h1>Webinar Registration Form</h1> </div>
+  <hr color="orange">
+  <form action="/submit" method="post">
+    <label for="name">Name:</label>
+    <input type="text" name="name" placeholder="Name" id="name" required>
+    <label for="email">Email:</label>
+    <input type="email" name="email" placeholder="ex: myname@example.com" id="email" required>
+    <label for="work_phone">Work Phone:</label>
+    <input type="tel" name="work_phone" placeholder="Work Phone Number" id="work_phone" required>
+    <label for="company">Company:</label>
+    <input type="text" name="company" placeholder="Company" id="company" required>
+    <label for="company_address">Company Address:</label>
+    <input type="text" name="company_address" placeholder="Company Address" id="company_address" required>
+    <label for="city">City:</label>
+    <input type="text" name="city" placeholder="City" id="city" required>
+    <label for="state_province">State/Province:</label>
+    <input type="text" name="state_province" placeholder="State/Province" id="state_province">
+    <label for="country">Country:</label>
+    <select name="country" id="country">
+      <option value="">Please Select</option>
+      <option value="AUS">Australia</option>
+      <option value="BAN">Bangladesh</option>
+      <option value="CAN">Canada</option>
+      <option value="IND">India</option>
+      <option value="WI">West Indies</option>
+      <option value="US">United States</option>
+      <option value="ENG">England</option>
+      <option value="NZ">New Zealand</option>
+      <option value="PAK">Pakisthan</option>
+    </select>
+    <label for="postal_zip_code">Postal/Zip Code:</label>
+    <input type="text" name="postal_zip_code" id="postal_zip_code" required>
+    <label for="company_website">Company Website:</label>
+    <input type="url" name="company_website" placeholder="Enter company website" id="company_website" required>
+    <div class="submit-button">
+        <input type="submit" value="Submit" required>
+    </div>
+  </form>
+  </div>
+</body>
+</html>
