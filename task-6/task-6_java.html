@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Java Problems</title>
+</head>
+<body>
+<script>
+  //1)	Write a JavaScript program to find the area of a triangle where three sides are 5, 6, 7.  
+const side1 = 5;
+const side2 = 6;
+const side3 = 7;
+const s = (side1 + side2 + side3) / 2;
+const area = Math.sqrt(
+  s * (s - side1) * (s - side2) * (s - side3)
+);
+console.log("Triangle area is "+area);
+//2)	Write a JavaScript program to determine whether a given year is a leap year in the Gregorian calendar.
+const isLeapYear = (year) => {
+  return ((year % 4 === 0 && year % 100 !== 0) || (year % 400 === 0));
+};
+const y=parseInt(prompt("Enter year: "))
+const result = isLeapYear(y);
+console.log(`The year ${y} is ${result ? "a leap year" : "not a leap year"}.`);
+const isFirstSunday = (years) => {
+  const date = new Date(years, 0, 1);
+  return date.getDay() === 0;
+};
+//3)	Write a JavaScript program to find out if 1st January will be a Sunday between 2014 and 2050.
+const yearsWithFirstSunday = [];
+for (let years = 2014; years <= 2050; years++) {
+  if (isFirstSunday(years)) {
+    yearsWithFirstSunday.push(years);
+  }
+}
+console.log(`The years with 1st January as a Sunday between 2014 and 2050 are: ${yearsWithFirstSunday.join(", ")}`);
+//4)	Write a JavaScript program to calculate the days left before Christmas.
+const daysLeftUntilChristmas = () => {
+  const today = new Date();
+  const christmas = new Date(today.getFullYear(), 11, 25);
+  if (today > christmas) {
+    christmas.setFullYear(christmas.getFullYear() + 1);
+  }
+  const millisecondsDiff = christmas - today;
+  const daysLeft = Math.ceil(millisecondsDiff / (1000 * 60 * 60 * 24));
+  return daysLeft;
+};
+const daysLeft = daysLeftUntilChristmas();
+console.log("There are "+daysLeft+" days left until Christmas!");
+// 5)	Write a JavaScript program to compare two objects to determine if the first contains equivalent property values to the second one.
+function areObjectsEqual(obj1, obj2) {
+  if (Object.keys(obj1).length !== Object.keys(obj2).length) {
+    return false;
+  }
+  for (const property in obj1) {
+    if (obj1[property] !== obj2[property]) {
+      return false;
+    }
+  }
+  return true;
+}
+  o1={
+    name: "Rohith",
+    age: 20,
+  };
+  o2={
+    name: "Reddy Rohith",
+    age: 20,
+  };
+ const o_b_j=areObjectsEqual(o1,o2);
+ console.log(o_b_j); //False
+//6) Write a JavaScript function that returns a string that has letters in alphabetical order.
+// Example string : 'webmaster'
+// Expected Output : 'abeemrstw'
+ function alphabetizeString(str) {
+  const characters = str.split("");
+  characters.sort();
+  const alphabetizedString = characters.join("");
+  return alphabetizedString;
+}
+const str = "webmaster";
+const alphabetizedString = alphabetizeString(str);
+console.log(alphabetizedString); // abeemrstw
+// 7)	Write a JavaScript function that accepts a string as a parameter and converts the first letter of each word into upper case
+// Example string : 'the quick brown fox'
+// Expected Output : 'The Quick Brown Fox '
+function capitalizeFirstLetter(str) {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+console.log(capitalizeFirstLetter('the quick brown fox'));//The Quick Brown Fox
+// 8)	Write a JavaScript function that takes an array of numbers and finds the second lowest and second greatest numbers, respectively.
+// Sample array : [1,2,3,4,5]
+// Expected Output : 2,4
+function findSecondLowestAndGreatest(numbers) {
+    numbers.sort(function(a, b) {
+        return a - b;
+    });
+    let secondLowest = numbers[1];
+    let secondGreatest = numbers[numbers.length - 2];
+    return [secondLowest, secondGreatest];
+}
+arr=[1,2,3,4];
+console.log(findSecondLowestAndGreatest(arr));
+</script>    
+</body>
+</html>
