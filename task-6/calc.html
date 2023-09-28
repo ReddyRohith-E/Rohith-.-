@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+</head>
+<body>
+    <script>
+       const calculator =(a,b,op)=>{
+        switch(op){
+            case '+': return a+b;
+            case '-': return a-b;
+            case '*': return a*b;
+            case '/': return a/b;
+            case '%': return a%b;
+            default: return "Operator not found!!";   
+        }
+       };
+       const a=prompt("Enter first number: ");
+       const op=prompt("Enter operation(+,-,*,/,%): ");
+       const b=prompt("Enter second number: ");
+       console.log(calculator(a,b,op));
+    </script>
+    
+</body>
+</html>
